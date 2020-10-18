@@ -44,18 +44,13 @@ starter_deck = Squib.yaml file: 'data/starter.yml'
 FileUtils.mkdir_p '_output/player_deck'
 Squib::Deck.new(
   cards: starter_deck.nrows,
+  width: '2.5in',
+  height: '3.5in',
 ) do
   use_layout file: ['fantasy.yml', 'layouts/player_card.yml']
 
   background color: 'white'
-  cut_zone radius: 0,  stroke_color: :white
-
-  build :with_zone_guide do
-    rect layout: 'title'
-    rect layout: 'art'
-    rect layout: 'description'
-    safe_zone radius: 0, stroke_color: :red
-  end
+  cut_zone radius: 0,  stroke_color: :black
 
   def basic_info(data:, attribute:, icon:, color:)
     range = data[attribute].each_index.select do |i|
@@ -95,5 +90,16 @@ Squib::Deck.new(
 
   text str: starter_deck['title'], layout: 'title'
 
-  save_png prefix: 'player_deck/starter_', trim: '0.125in'
+  build :dev do
+    save_png prefix: 'player_deck/initiative_', trim: '0.125in'
+
+    save_sheet(
+      prefix: 'starter_',
+      trim: '0.125in',
+      rows: (TEXTURE_HEIGHT / @height).floor,
+      columns: (TEXTURE_WIDTH / @width).floor,
+      sheet_width: TEXTURE_WIDTH,
+      sheet_height: TEXTURE_HEIGHT
+    )
+  end
 end

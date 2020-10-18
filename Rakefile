@@ -5,7 +5,7 @@ require 'rake/clean'
 CLEAN.include('_output/*').exclude('_output/.gitkeep')
 
 desc 'By default, just build the deck without extra options'
-task default: [:with_zone_guide, :deck]
+task default: [:dev, :deck]
 
 desc 'Build everything, with all the options'
 task all: [:with_pnp, :with_proofs, :deck]
@@ -27,7 +27,7 @@ task(:with_pnp) do
   Squib.enable_build_globally :pnp
 end
 
-desc 'Enable zone guide lines'
-task(:with_zone_guide) do
-  Squib.enable_build_globally :with_zone_guide
+desc 'Enable development option'
+task(:dev) do
+  Squib.enable_build_globally :dev
 end
