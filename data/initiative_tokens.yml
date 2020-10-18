@@ -16,5 +16,5 @@
 
 - type: 'player'
   color: 'blue'
-  icon: 'delapouite/war-axe'
+  icon: 'lorc/sword-hilt'
   qty: 4
