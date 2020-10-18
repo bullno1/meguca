@@ -1,15 +1,8 @@
 require 'squib'
 require 'game_icons'
+require_relative 'utils'
 
 # Tokens
-
-def size_from_layout(file, name, dpi: 300)
-  layout = YAML.load_file(file)
-  {
-    :width => Squib::Args::UnitConversion.parse(layout[name]['width'], dpi),
-    :height => Squib::Args::UnitConversion.parse(layout[name]['height'], dpi)
-  }
-end
 
 initiative_tokens = Squib.yaml file: 'data/initiative_tokens.yml'
 
@@ -41,3 +34,5 @@ Squib::Deck.new(
 
   save_png prefix: 'initiative_token'
 end
+
+# Starter deck
