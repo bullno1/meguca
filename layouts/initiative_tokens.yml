@@ -1,0 +1,14 @@
+---
+base:
+  width: '1in'
+  height: '1in'
+
+icon:
+  x: '0.125in'
+  y: '0.125in'
+  width: '0.75in'
+  height: '0.75in'
+
+initiative_number:
+  x: '0.03in'
+  y: '0.00in'

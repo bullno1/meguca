@@ -1,0 +1,20 @@
+---
+- type: 'player'
+  color: 'yellow'
+  icon: 'skoll/musket'
+  qty: 4
+
+- type: 'player'
+  color: 'pink'
+  icon: 'delapouite/bow-arrow'
+  qty: 4
+
+- type: 'player'
+  color: 'red'
+  icon: 'delapouite/nunchaku'
+  qty: 4
+
+- type: 'player'
+  color: 'blue'
+  icon: 'delapouite/war-axe'
+  qty: 4
