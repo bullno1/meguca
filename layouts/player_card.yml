@@ -1,0 +1,33 @@
+title:
+  x: 90
+  y: 90
+  width: 500
+  height: 50
+  font_size: 11
+
+attack:
+  extends: art
+  x: += 0.0625in
+  y: += 0.0625in
+  width: 0.25in
+  height: 0.25in
+
+attack_value:
+  extends: attack
+  x: += 0.26in
+
+coin:
+  extends: attack
+  y: += 0.28in
+
+coin_value:
+  extends: coin
+  x: += 0.26in
+
+move:
+  extends: coin
+  y: += 0.28in
+
+move_value:
+  extends: move
+  x: += 0.26in

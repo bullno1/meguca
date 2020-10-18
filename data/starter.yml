@@ -1,0 +1,15 @@
+---
+- id: starter-attack
+  title: "Hit"
+  attack: 1
+  qty: 3
+
+- id: starter-money
+  title: "Focus"
+  coin: 1
+  qty: 5
+
+- id: starter-move
+  title: "Walk"
+  move: 2
+  qty: 2
