@@ -1,0 +1,21 @@
+#!/usr/bin/env node
+
+const net = require('net');
+
+const server = new net.Server();
+
+server.listen(39998, () => {
+	console.log("Started");
+});
+
+server.on('connection', (socket) => {
+	const buffers = [];
+
+    socket.on('data', (chunk) => {
+		buffers.push(chunk);
+    });
+
+    socket.on('end', () => {
+		console.log(JSON.parse(buffers.toString()));
+    });
+});

@@ -1,0 +1,10 @@
+#!/usr/bin/env node
+
+const fs = require('fs');
+const common = require('./common');
+
+common.sendMsg({
+    "messageID": 3,
+	"guid": "-1",
+    "script": fs.readFileSync(process.argv[2]).toString(),
+});
